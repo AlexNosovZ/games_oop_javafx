@@ -29,6 +29,7 @@ public class LogicTest {
         OccupiedCellException exception = assertThrows(OccupiedCellException.class, () -> {
             logic.move(Cell.C3, Cell.D4);
         });
+        assertThat(exception.getMessage()).isEqualTo("Cell D4 is occupied");
     }
 
     @Test

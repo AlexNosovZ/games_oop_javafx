@@ -25,7 +25,7 @@ public final class Logic {
             for (int index = 0; index != figures.length; index++) {
                 Figure figure = figures[index];
                 if (figure != null && figure.position().equals(step)) {
-                    throw new OccupiedCellException();
+                    throw new OccupiedCellException(String.format("Cell %s is occupied", step));
                 }
             }
         }
